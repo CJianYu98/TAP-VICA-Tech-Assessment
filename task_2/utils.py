@@ -1,4 +1,11 @@
 def process_data(data, row):
+    """
+    Helper function to process data from raw data file and format them to the correct structure required
+
+    Args:
+        data (list): List of data
+        row (pandas.Series): Data row/record
+    """
     data.append(
         {
             "insuree#": int(row["insuree#"]),
