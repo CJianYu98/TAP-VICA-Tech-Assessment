@@ -27,3 +27,6 @@ assert len(df) == len(data)
 
 # Insert data into collection
 insurance.insert_many(data[i] for i in range(len(data)))
+
+# Check if data has been uploaded into the database collection correctly
+assert insurance.count_documents({}) == len(df)
